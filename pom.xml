@@ -42,6 +42,13 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>com.cogent</groupId>
+			<artifactId>ecommerce</artifactId>
+			<scope>system</scope>
+			<version>0.0.1-SNAPSHOT</version>
+			<systemPath>${basedir}\lib\ecommerce-0.0.1-SNAPSHOT.jar</systemPath>
+		</dependency>
 	</dependencies>
 
 	<build>
