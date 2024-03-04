@@ -3,6 +3,7 @@ package com.cogent.ecommercesalesreport.service;
 import com.cogent.ecommerce.model.SalesItem;
 import com.cogent.ecommerce.repository.SalesItemJpaRepository;
 import com.cogent.ecommercesalesreport.controller.UserSalesReportDTO;
+import com.cogent.ecommercesalesreport.repository.SalesItemJpaRepository2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,7 +16,7 @@ import java.util.Map;
 public class SalesReportService {
 
     @Autowired
-    private SalesItemJpaRepository jpaRepository;
+    private SalesItemJpaRepository2 jpaRepository;
 
     public List<SalesItem> getSalesItems() {
         return jpaRepository.findAll();
