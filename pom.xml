@@ -43,6 +43,11 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+			<version>4.1.0</version>
+		</dependency>
+		<dependency>
 			<groupId>com.cogent</groupId>
 			<artifactId>ecommerce</artifactId>
 			<scope>system</scope>
