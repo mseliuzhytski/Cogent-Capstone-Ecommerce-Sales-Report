@@ -26,9 +26,19 @@ public class SalesReportController {
         return salesReportService.getSalesReportsByUser();
     }
 
-    @PostMapping("/aggregateByUserTimeFilter")
-    public Collection<UserSalesReportDTO> getSalesReportsByUser(@RequestBody TimeInterval interval) {
-        return salesReportService.getSalesReportsByUser(interval.getStartTime(), interval.getEndTime());
+    @GetMapping("/aggregateByUserTimeFilter/{start}/{end}")
+    public Collection<UserSalesReportDTO> getSalesReportsByUser(@PathVariable long start, @PathVariable long end) {
+        return salesReportService.getSalesReportsByUser(start, end);
+    }
+
+    @GetMapping("/test")
+    public String getTest() {
+        return "working";
+    }
+
+    @GetMapping("/test2/{start}/{end}")
+    public String getTest2(@PathVariable long start, @PathVariable long end) {
+        return start + " " + end;
     }
 
 
